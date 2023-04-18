@@ -1,0 +1,31 @@
+.moves-list-container {
+  background-color: #d4d3d3;
+  margin: auto;
+  margin-block-start: 20px;
+  width: 350px;
+  padding: 15px;
+  border-radius: 15px;
+  display: grid;
+  hr {
+      width: 100%;
+      margin: 0px;
+    }
+    h3{
+        margin: 15px;
+    }
+  .move-list-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-block-end: 5px;
+    h3 {
+      font-size: 1em;
+      text-align: left;
+      margin: 3px;
+    }
+    hr {
+      width: 100%;
+      margin: 0px;
+    }
+  }
+}

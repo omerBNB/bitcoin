@@ -1,0 +1,15 @@
+//main
+@import './main/base.scss';
+// cmps
+@import './cmps/ContactsPreview.scss';
+@import './cmps/ContactsList.scss';
+@import './cmps/AppHeader.scss';
+@import './cmps/Charts.scss';
+@import './cmps/FilterBy.scss';
+@import './cmps/MoveList.scss';
+// views
+@import './views/HomePage.scss';
+@import './views/UserStats.scss';
+@import './views/ContactDetails.scss';
+@import './views/ContactEdit.scss';
+@import './views/SignUp.scss';

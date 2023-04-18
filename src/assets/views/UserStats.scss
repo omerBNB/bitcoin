@@ -1,0 +1,15 @@
+.userstats-page-container {
+  // height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+//   margin-block-start: 20px;
+  .user-stats-container {
+    border: 1px solid gray;
+    margin: auto;
+    margin-block-start: 20px;
+    height: 150px;
+    width: 250px;
+    border-radius: 15px;
+    color: white;
+  }
+}
