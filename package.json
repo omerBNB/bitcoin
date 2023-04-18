@@ -1,7 +1,7 @@
 {
   "name": "robots-react-inclass",
   "version": "0.1.0",
-  "homepage": "https://omerbnb.github.io/BitcoinApp---React/",
+  "homepage": "https://omerbnb.github.io/bitcoin/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +13,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
+    "gh-pages": "^5.0.0",
     "react-sparklines": "^1.7.0",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
@@ -46,7 +47,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.3.3",
-    "gh-pages": "^5.0.0"
+    "@types/react-router-dom": "^5.3.3"
   }
 }
