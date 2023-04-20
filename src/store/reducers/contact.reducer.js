@@ -1,12 +1,14 @@
 
 export const SET_CONTACTS = 'SET_CONTACTS'
 export const ADD_CONTACT = 'ADD_CONTACT'
+export const GET_CONTACT = 'GET_CONTACT'
 export const REMOVE_CONTACT = 'REMOVE_CONTACT'
 export const UPDATE_CONTACT = 'UPDATE_CONTACT'
 export const SET_FILTER_BY = 'SET_FILTER_BY'
 
 const INITIAL_STATE = {
     contacts: null,
+    contact:null,
     filterBy: {
         name: '',
         email: '',
@@ -22,6 +24,11 @@ export function contactReducer(state = INITIAL_STATE, action = {}) {
                 ...state,
                 contacts: action.contacts
             }
+        case GET_CONTACT:
+            return {
+                ...state,
+                contact: action.contact
+            }
         case ADD_CONTACT:
             return {
                 ...state,
@@ -35,7 +42,7 @@ export function contactReducer(state = INITIAL_STATE, action = {}) {
         case UPDATE_CONTACT:
             return {
                 ...state,
-                contacts: state.contacts.map(contact => contact._id === action.contact._id ? action.contact : contact)
+                contact: action.contact
             }
         case SET_FILTER_BY:
             return {

@@ -10,7 +10,7 @@ export class Login extends Component {
   login = (ev) => {
     ev.preventDefault()
     const user = UserService.login(this.state.username)
-    console.log(user)
+    this.props.history.push('/contact')
   }
 
   handleChange = ({ target }) => {

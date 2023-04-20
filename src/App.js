@@ -9,6 +9,7 @@ import { SignUp } from './views/SignUp';
 import { Login } from './views/Login';
 import { UserStats } from './views/UserStats';
 import { HomePage } from './views/HomePage';
+import { AppFooter } from './views/AppFooter';
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/" component={HomePage}/>
           </Switch>
         </main>
+          <AppFooter/>
       </div>
       </Router>
 

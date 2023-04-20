@@ -1,84 +1,270 @@
-.main-homepage-container {
-  display: grid;
-  margin-block-start: 50px;
-  grid-template-columns: 160px repeat(2, 1fr) 160px;
-  background-color: #fff;
-  .hompage-opening-card {
-    padding: 20px;
-    grid-column: 2;
-    margin-block-start: 40px;
-    .homepage-opening-navlink {
-      text-decoration: none;
-    }
-    .hompage-opening-inner-card {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: blue;
-      font-weight: bold;
-    }
-    .hompage-h1 {
-      margin: 0px;
-      margin-block-start: 10px;
-      font-size: 4em;
-      text-align: left;
-    }
-    .hompage-h3 {
-      margin: 0px;
-      margin-block-end: 20px;
-      margin-block-start: 30px;
-      text-align: left;
-    }
-    .homepage-btn {
-      background-color: rgb(0, 82, 255);
-      border: 1px solid rgb(0, 82, 255);
-      border-radius: 4px;
-      padding: 24px;
-      width: 100%;
-      font-weight: bold;
-      color: white;
-      margin-block-start: 35px;
-      cursor: pointer;
-    }
-  }
-  .hompage-img-card {
-    grid-column: 3;
-    img {
-      width: 100%;
-    }
-  }
-  .hompage-second-card {
-    margin-block-start: 25px;
-    grid-row: 2;
-    grid-column: 1/-1;
+@media (min-width:344px){
+  .main-homepage-container {
     display: grid;
-    grid-template-columns: 150px 200px 1fr 150px;
-    // height: 150px;
-    padding: 20px;
-    background-color: #000000;
-    .hompage-second-card-img {
+    margin-block-start: 50px;
+    grid-template-columns: 40px repeat(2, 1fr) 40px;
+    background-color: #fff;
+    .hompage-opening-card {
+      padding: 10px;
       grid-column: 2;
-    }
-    .hompage-second-card-content {
-      color: white;
-      text-align: left;
-      .hompage-second-card-h1 {
-        font-size: 2em;
-        margin: 0px;
+      .homepage-opening-navlink {
+        text-decoration: none;
       }
-      .hompage-second-card-p {
-        font-size: 1.2em;
-        width: 60%;
-      }
-      .homepage-sec-btn {
-        background-color: #477EF6;
-        border: 1px solid #477EF6;
-        border-radius: 35px;
-        padding: 16px;
-        width: 220px;
+      .hompage-opening-inner-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: .5em;
+        color: blue;
         font-weight: bold;
-        color: rgb(0, 0, 0);
+      }
+      .hompage-h1 {
+        margin: 0px;
+        margin-block-start: 10px;
+        font-size: .9em;
+        text-align: left;
+      }
+      .hompage-h3 {
+        margin: 0px;
+        font-size: 0.6em;
+        margin-block-end: 10px;
+        margin-block-start: 20px;
+        text-align: left;
+      }
+      .homepage-btn {
+        background-color: rgb(0, 82, 255);
+        border: 1px solid rgb(0, 82, 255);
+        border-radius: 4px;
+        padding: 12px;
+        width: 100%;
+        font-weight: bold;
+        color: white;
+        margin-block-start: 15px;
         cursor: pointer;
+      }
+    }
+    .hompage-img-card {
+      grid-column: 3;
+      img {
+        width: 100%;
+      }
+    }
+    .hompage-second-card {
+      margin-block-start: 25px;
+      grid-row: 2;
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 20px 50px 1fr 20px;
+      // height: 150px;
+      padding: 10px;
+      gap: 10px;
+      background-color: #000000;
+      .hompage-second-card-img {
+        grid-column: 2;
+        width: 100%;
+      }
+      .hompage-second-card-content {
+        color: white;
+        text-align: left;
+        .hompage-second-card-h1 {
+          font-size: 1em;
+          margin: 0px;
+        }
+        .hompage-second-card-p {
+          font-size: .8em;
+          width: 100%;
+        }
+        .homepage-sec-btn {
+          background-color: #477EF6;
+          border: 1px solid #477EF6;
+          border-radius: 35px;
+          padding: 8px;
+          width: 220px;
+          font-weight: bold;
+          color: rgb(0, 0, 0);
+          cursor: pointer;
+        }
+      }
+    }
+    .hompage-third-card{
+      grid-column: 2/4;
+      display: flex;
+      flex-direction: column;
+      .flex{
+        align-items: center;
+        gap: 25px;
+        h2{
+          margin: 0px;
+          font-size: .9em;
+          margin-block-start: 15px;
+        }
+        p{
+          margin: 0px;
+          font-size: .7em;
+        }
+      }
+      .hompage-third-card-h3{
+        font-size: 1.3em;
+        margin: 0px;
+        margin-block-start: 20px;
+        margin-block-end: 10px;
+      }
+      .hompage-third-card-p{
+        font-size: .9em;
+        margin: 0px;
+        margin-block-start: 10px;
+        margin-block-end: 50px;
+      }
+      .hompage-inner-third-card-container{
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 30px;
+        .hompage-inner-third-card{
+          grid-row: 1;
+          text-align: left;
+          display: flex;
+          .flex{
+            margin-block-end: 10px;
+          }
+        }
+        .hompage-inner-third-card-img{
+          grid-row: 2;
+          width: 100%;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+@media (min-width:744px){
+  .main-homepage-container {
+    display: grid;
+    margin-block-start: 50px;
+    grid-template-columns: 160px repeat(2, 1fr) 160px;
+    background-color: #fff;
+    .hompage-opening-card {
+      padding: 20px;
+      grid-column: 2;
+      margin-block-start: 40px;
+      .homepage-opening-navlink {
+        text-decoration: none;
+      }
+      .hompage-opening-inner-card {
+        display: flex;
+        align-items: center;
+        font-size: 1.3em;
+        gap: 10px;
+        color: blue;
+        font-weight: bold;
+      }
+      .hompage-h1 {
+        margin: 0px;
+        margin-block-start: 10px;
+        font-size: 4em;
+        text-align: left;
+      }
+      .hompage-h3 {
+        margin: 0px;
+        margin-block-end: 20px;
+        margin-block-start: 30px;
+        font-size: 1.3em;
+        text-align: left;
+      }
+      .homepage-btn {
+        background-color: rgb(0, 82, 255);
+        border: 1px solid rgb(0, 82, 255);
+        border-radius: 4px;
+        padding: 24px;
+        width: 100%;
+        font-weight: bold;
+        color: white;
+        margin-block-start: 25px;
+        cursor: pointer;
+      }
+    }
+    .hompage-img-card {
+      grid-column: 3;
+      img {
+        width: 100%;
+      }
+    }
+    .hompage-second-card {
+      margin-block-start: 25px;
+      grid-row: 2;
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 150px 200px 1fr 150px;
+      // height: 150px;
+      padding: 20px;
+      background-color: #000000;
+      .hompage-second-card-img {
+        grid-column: 2;
+      }
+      .hompage-second-card-content {
+        color: white;
+        text-align: left;
+        .hompage-second-card-h1 {
+          font-size: 2em;
+          margin: 0px;
+        }
+        .hompage-second-card-p {
+          font-size: 1.2em;
+          width: 60%;
+        }
+        .homepage-sec-btn {
+          background-color: #477EF6;
+          border: 1px solid #477EF6;
+          border-radius: 35px;
+          padding: 16px;
+          width: 220px;
+          font-weight: bold;
+          color: rgb(0, 0, 0);
+          cursor: pointer;
+        }
+      }
+    }
+    .hompage-third-card{
+      grid-column: 2/4;
+      display: flex;
+      flex-direction: column;
+      .flex{
+        align-items: center;
+        gap: 25px;
+        h2{
+          margin: 0px;
+          font-size: 1.3em;
+          margin-block-start: 15px;
+        }
+        p{
+          margin: 0px;
+          font-size: 1em;
+        }
+      }
+      .hompage-third-card-h3{
+        font-size: 2.5em;
+        margin: 0px;
+        margin-block-start: 20px;
+        margin-block-end: 10px;
+      }
+      .hompage-third-card-p{
+        font-size: 1.25em;
+        margin: 0px;
+        margin-block-start: 10px;
+        margin-block-end: 50px;
+      }
+      .hompage-inner-third-card-container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        .hompage-inner-third-card{
+          grid-column: 1;
+          text-align: left;
+          display: flex;
+        }
+        .hompage-inner-third-card-img{
+          grid-column: 2;
+          width: 100%;
+          display: flex;
+        }
       }
     }
   }

@@ -12,7 +12,7 @@ export function TransferFund({ contact, transferFunds, handleChange, funds }) {
           onChange={handleChange}
           type="range"
           min="1"
-          max={contact.coins}
+          max="100"
         />
         <button>Transfer</button>
       </form>

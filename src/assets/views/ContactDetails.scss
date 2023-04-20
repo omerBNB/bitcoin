@@ -1,38 +1,112 @@
-.details-container {
-  background-color: #fff;
-  .details-card {
+@media (min-width: 344px) {
+  .details-container {
     background-color: #fff;
-    width: 550px;
-    // height: 550px;
-    margin: auto;
-    border-radius: 15px;
-    margin-block-start: 20px;
-    padding: 15px;
-    border: 1px solid rgb(128, 128, 128, 0.4);
-    img {
-      height: 100px;
-    }
-    .transfer-fund-container {
-      background-color: rgb(76, 209, 239);
-      padding: 15px;
-      border-radius: 15px;
-      width: 350px;
+    .details-card {
+      background-color: #fff;
+      width: 320px;
+      // height: 550px;
       margin: auto;
-      h3 {
-        margin: 0px;
-        margin-block-end: 10px;
+      border-radius: 15px;
+      margin-block-start: 20px;
+      padding: 15px;
+      border: 1px solid rgb(128, 128, 128, 0.4);
+      img {
+        height: 100px;
+      }
+      .transfer-fund-container {
+        background-color: rgb(76, 209, 239);
+        padding: 15px;
+        border-radius: 15px;
+        width: 250px;
+        margin: auto;
+        form {
+          h3 {
+            font-size: 1em;
+            margin: 0px;
+            margin-block-end: 10px;
+          }
+          button {
+            margin-block-start: 20px;
+            background-color: rgb(0, 82, 255);
+            border: 1px solid rgb(0, 82, 255);
+            border-radius: 10px;
+            height: 30px;
+            width: 140px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+          }
+        }
       }
     }
+    .details-btn {
+      margin-block-start: 20px;
+      background-color: rgb(0, 82, 255);
+      border: 1px solid rgb(0, 82, 255);
+      border-radius: 10px;
+      height: 30px;
+      width: 140px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
   }
-  .details-btn {
-    margin-block-start: 20px;
-    background-color: rgb(0, 82, 255);
-    border: 1px solid rgb(0, 82, 255);
-    border-radius: 10px;
-    height: 30px;
-    width: 140px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+}
+
+@media (min-width: 744px) {
+  .details-container {
+    background-color: #fff;
+    .details-card {
+      background-color: #fff;
+      width: 550px;
+      // height: 550px;
+      margin: auto;
+      border-radius: 15px;
+      margin-block-start: 20px;
+      padding: 15px;
+      border: 1px solid rgb(128, 128, 128, 0.4);
+      img {
+        height: 100px;
+      }
+      .transfer-fund-container {
+        background-color: rgb(76, 209, 239);
+        padding: 15px;
+        border-radius: 15px;
+        width: 350px;
+        margin: auto;
+        form{
+          display: flex;
+          flex-direction: column;
+          button {
+            margin: auto;
+            margin-block-start: 20px;
+            background-color: rgb(0, 82, 255);
+            border: 1px solid rgb(0, 82, 255);
+            border-radius: 10px;
+            height: 30px;
+            width: 140px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+          }
+        }
+        h3 {
+          font-size: 1.2em;
+          margin: 0px;
+          margin-block-end: 10px;
+        }
+      }
+    }
+    .details-btn {
+      margin-block-start: 20px;
+      background-color: rgb(0, 82, 255);
+      border: 1px solid rgb(0, 82, 255);
+      border-radius: 10px;
+      height: 30px;
+      width: 140px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
   }
 }

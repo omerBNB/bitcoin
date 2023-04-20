@@ -16,7 +16,11 @@ export function userReducer(state = INITIAL_STATE, action = {}) {
                 ...state,
                 loggedInUser: { ...loggedInUser, balance: loggedInUser.balance - action.amount }
             }
-
+        case 'GET_USER':
+            return{
+                ...state,
+                loggedInUser: action.loggedInUser
+            }
 
         default:
             return state;

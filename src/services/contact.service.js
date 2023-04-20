@@ -1,3 +1,6 @@
+import { utilService } from "./util.service"
+import { storageService } from "./async-storage.service"
+
 export const contactService = {
     getContacts,
     getContactById,
@@ -8,7 +11,7 @@ export const contactService = {
 
 
 
-const contacts = [
+const gContacts = [
     {
         "_id": "5a56640269f443a5d64b32ca",
         "name": "Ochoa Hyde",
@@ -129,91 +132,30 @@ const contacts = [
 addImgsToContacts()
 addFunds()
 
-function sort(arr) {
-    return arr.sort((a, b) => {
-        if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) {
-            return -1;
-        }
-        if (a.name.toLocaleLowerCase() > b.name.toLocaleLowerCase()) {
-            return 1;
-        }
+// function sort(arr) {
+//     return arr.sort((a, b) => {
+//         if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) {
+//             return -1;
+//         }
+//         if (a.name.toLocaleLowerCase() > b.name.toLocaleLowerCase()) {
+//             return 1;
+//         }
 
-        return 0;
-    })
-}
+//         return 0;
+//     })
+// }
 function addFunds() {
-    contacts.forEach(
-        (contact) => (contact.coins = 100)
+    gContacts.forEach(
+        (contact) => (contact.coins = 0)
     )
 }
 
-function getContacts(filterBy = null) {
-    return new Promise((resolve, reject) => {
-        var contactsToReturn = contacts;
-        if (filterBy) {
-            contactsToReturn = filter(filterBy)
-        }
-        // resolve(sort(contactsToReturn))
-        return resolve(contactsToReturn)
-    })
-}
-
-function addImgsToContacts() {
-    contacts.forEach(
-        (contact) => (contact.img = `https://robohash.org/set_set5/${contact._id}?gravatar=hashed`)
-    )
-}
-
-function getContactById(id) {
-    return new Promise((resolve, reject) => {
-        const contact = contacts.find(contact => contact._id === id)
-        contact ? resolve(contact) : reject(`Contact id ${id} not found!`)
-    })
-}
-
-function deleteContact(id) {
-    return new Promise((resolve, reject) => {
-        const index = contacts.findIndex(contact => contact._id === id)
-        if (index !== -1) {
-            contacts.splice(index, 1)
-        }
-
-        resolve(contacts)
-    })
-}
-
-function _updateContact(contact) {
-    console.log('contact', contact)
-    return new Promise((resolve, reject) => {
-        const index = contacts.findIndex(c => contact._id === c._id)
-        if (index !== -1) {
-            contacts[index] = contact
-        }
-        resolve(contact)
-    })
-}
-
-function _addContact(contact) {
-    return new Promise((resolve, reject) => {
-        contact._id = _makeId()
-        contacts.push(contact)
-        resolve(contact)
-    })
-}
-
-function saveContact(contact) {
-    return contact._id ? _updateContact(contact) : _addContact(contact)
-}
-
-function getEmptyContact() {
-    return {
-        name: '',
-        email: '',
-        phone: ''
+async function getContacts(filterBy = null) {
+    let contacts = await utilService.loadFromStorage('contact')
+    if (!contacts || !contacts.length) {
+        contacts = gContacts
+        utilService.saveToStorage('contact', contacts)
     }
-}
-
-function filter(filterBy) {
     filterBy.name = filterBy.name.toLocaleLowerCase()
     filterBy.phone = filterBy.phone.toLocaleLowerCase()
     filterBy.email = filterBy.email.toLocaleLowerCase()
@@ -232,15 +174,72 @@ function filter(filterBy) {
             return contact.email.toLocaleLowerCase().includes(filterBy.email)
         })
     }
-    // return contacts.filter(contact => {
-    //     return contact.name.toLocaleLowerCase().includes(filterBy.name) ||
-    //         contact.phone.toLocaleLowerCase().includes(filterBy.phone) ||
-    //         contact.email.toLocaleLowerCase().includes(filterBy.email)
-    // })
     return contacts
 }
 
+function addImgsToContacts() {
+    gContacts.forEach(
+        (contact) => (contact.img = `https://robohash.org/set_set5/${contact._id}?gravatar=hashed`)
+    )
+}
 
+async function getContactById(id) {
+    const contact = await storageService.get('contact', id)
+    return contact
+}
+
+function deleteContact(id) {
+    return new Promise((resolve, reject) => {
+        const index = gContacts.findIndex(contact => contact._id === id)
+        if (index !== -1) {
+            gContacts.splice(index, 1)
+        }
+
+        resolve(gContacts)
+    })
+}
+
+
+async function saveContact(contactToSave) {
+    let contact
+    if (contactToSave._id) {
+        contact = await storageService.put('contact', contactToSave)
+    }
+    else {
+        contact = await storageService.post('contact', contactToSave)
+    }
+    return contact
+}
+
+function getEmptyContact() {
+    return {
+        name: '',
+        email: '',
+        phone: ''
+    }
+}
+
+// function filter(filterBy) {
+//     filterBy.name = filterBy.name.toLocaleLowerCase()
+//     filterBy.phone = filterBy.phone.toLocaleLowerCase()
+//     filterBy.email = filterBy.email.toLocaleLowerCase()
+//     if (filterBy.name) {
+//         return gContacts.filter(contact => {
+//             return contact.name.toLocaleLowerCase().includes(filterBy.name)
+//         })
+//     }
+//     if (filterBy.phone) {
+//         return gContacts.filter(contact => {
+//             return contact.phone.toLocaleLowerCase().includes(filterBy.phone)
+//         })
+//     }
+//     if (filterBy.email) {
+//         return gContacts.filter(contact => {
+//             return contact.email.toLocaleLowerCase().includes(filterBy.email)
+//         })
+//     }
+//     return gContacts
+// }
 
 function _makeId(length = 10) {
     var txt = ''

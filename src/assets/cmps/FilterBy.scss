@@ -1,29 +1,64 @@
-.filter-container{
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: auto;
-    margin-block-start: 20px;
-    margin-block-end: 20px;
-    color: #080808;
-    padding: 20px;
-    background: rgba(255, 255, 255);
-    border-radius: 15px;
-    border: 1px solid gray;
-    label{
-        text-align: left;
-        font-weight: bold;
-        margin-block-start: 5px;
-        margin-block-end: 5px;
+@media (min-width:344px){
+    .filter-container{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: auto;
+        margin-block-start: 20px;
+        margin-block-end: 20px;
+        color: #080808;
+        padding: 20px;
+        background: rgba(255, 255, 255);
+        border-radius: 15px;
+        border: 1px solid gray;
+        label{
+            text-align: left;
+            font-weight: bold;
+            margin-block-start: 5px;
+            margin-block-end: 5px;
+        }
+        input{
+            border: 2px solid blue;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .filter-h1{
+            text-align: left;
+            margin: 0px;
+            margin-block-end: 10px;
+        }
     }
-    input{
-        border: 2px solid blue;
-        border-radius: 5px;
-        padding: 5px;
-    }
-    .filter-h1{
-        text-align: left;
-        margin: 0px;
-        margin-block-end: 10px;
+}
+
+
+@media (min-width:744px){
+    .filter-container{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin: auto;
+        margin-block-start: 20px;
+        margin-block-end: 20px;
+        color: #080808;
+        padding: 20px;
+        background: rgba(255, 255, 255);
+        border-radius: 15px;
+        border: 1px solid gray;
+        label{
+            text-align: left;
+            font-weight: bold;
+            margin-block-start: 5px;
+            margin-block-end: 5px;
+        }
+        input{
+            border: 2px solid blue;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .filter-h1{
+            text-align: left;
+            margin: 0px;
+            margin-block-end: 10px;
+        }
     }
 }

@@ -6,7 +6,8 @@ export const UserService = {
     signUp,
     login,
     update,
-    getById
+    getById,
+    getLoggedinUser
 }
 
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
@@ -45,7 +46,7 @@ function getUsers() {
         ]
         utilService.saveToStorage('user',users)
     }
-    return 
+    return users
     // return httpService.get(`user`)
 }
 

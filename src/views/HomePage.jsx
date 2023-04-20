@@ -71,6 +71,221 @@ export class HomePage extends Component {
             </NavLink>
           </div>
         </div>
+        <div className="hompage-third-card">
+          <h2 className="hompage-third-card-h3">Create your cryptocurrency portfolio today</h2>
+          <p className="hompage-third-card-p">
+            Bitcoin has a variety of features that make it the best place to start trading
+          </p>
+          <div className="hompage-inner-third-card-container">
+            <div className="hompage-inner-third-card">
+              <div>
+                <div className="flex">
+                  <div>
+                    <svg
+                      width="30px"
+                      height="32px"
+                      viewBox="0 0 30 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Second-Group"
+                        stroke="none"
+                        strokeWidth="1"
+                        fill="none"
+                        fillRule="evenodd">
+                        <g id="V2---All-new" transform="translate(-683.000000, -1591.000000)">
+                          <g id="Group-20" transform="translate(0.000000, 1068.000000)">
+                            <g id="Group-48" transform="translate(662.000000, 229.000000)">
+                              <g id="Group-10" transform="translate(0.000000, 270.000000)">
+                                <g id="Group-38" transform="translate(0.000000, 4.000000)">
+                                  <g id="Group" transform="translate(21.000000, 20.000000)">
+                                    <polygon
+                                      id="Fill-1"
+                                      fill="#D4EEFF"
+                                      points="10 32 20 32 20 10 10 10"></polygon>
+                                    <polygon
+                                      id="Fill-2"
+                                      fill="#1752F0"
+                                      points="20 32 30.0005 32 30.0005 0 20 0"></polygon>
+                                    <polygon
+                                      id="Fill-3"
+                                      fill="#55B4FC"
+                                      points="0 32 10 32 10 19 0 19"></polygon>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2>Manage your portfolio</h2>
+                    <p>
+                      Buy and sell popular digital currencies, keep track of them in the one place.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div>
+                    <svg
+                      width="30px"
+                      height="32px"
+                      viewBox="0 0 30 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Second-Group"
+                        stroke="none"
+                        strokeWidth="1"
+                        fill="none"
+                        fillRule="evenodd">
+                        <g id="V2---All-new" transform="translate(-683.000000, -1591.000000)">
+                          <g id="Group-20" transform="translate(0.000000, 1068.000000)">
+                            <g id="Group-48" transform="translate(662.000000, 229.000000)">
+                              <g id="Group-10" transform="translate(0.000000, 270.000000)">
+                                <g id="Group-38" transform="translate(0.000000, 4.000000)">
+                                  <g id="Group" transform="translate(21.000000, 20.000000)">
+                                    <polygon
+                                      id="Fill-1"
+                                      fill="#D4EEFF"
+                                      points="10 32 20 32 20 10 10 10"></polygon>
+                                    <polygon
+                                      id="Fill-2"
+                                      fill="#1752F0"
+                                      points="20 32 30.0005 32 30.0005 0 20 0"></polygon>
+                                    <polygon
+                                      id="Fill-3"
+                                      fill="#55B4FC"
+                                      points="0 32 10 32 10 19 0 19"></polygon>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2>Manage your portfolio</h2>
+                    <p>
+                      Buy and sell popular digital currencies, keep track of them in the one place.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div>
+                    <svg
+                      width="30px"
+                      height="32px"
+                      viewBox="0 0 30 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Second-Group"
+                        stroke="none"
+                        strokeWidth="1"
+                        fill="none"
+                        fillRule="evenodd">
+                        <g id="V2---All-new" transform="translate(-683.000000, -1591.000000)">
+                          <g id="Group-20" transform="translate(0.000000, 1068.000000)">
+                            <g id="Group-48" transform="translate(662.000000, 229.000000)">
+                              <g id="Group-10" transform="translate(0.000000, 270.000000)">
+                                <g id="Group-38" transform="translate(0.000000, 4.000000)">
+                                  <g id="Group" transform="translate(21.000000, 20.000000)">
+                                    <polygon
+                                      id="Fill-1"
+                                      fill="#D4EEFF"
+                                      points="10 32 20 32 20 10 10 10"></polygon>
+                                    <polygon
+                                      id="Fill-2"
+                                      fill="#1752F0"
+                                      points="20 32 30.0005 32 30.0005 0 20 0"></polygon>
+                                    <polygon
+                                      id="Fill-3"
+                                      fill="#55B4FC"
+                                      points="0 32 10 32 10 19 0 19"></polygon>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2>Manage your portfolio</h2>
+                    <p>
+                      Buy and sell popular digital currencies, keep track of them in the one place.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div>
+                    <svg
+                      width="30px"
+                      height="32px"
+                      viewBox="0 0 30 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Second-Group"
+                        stroke="none"
+                        strokeWidth="1"
+                        fill="none"
+                        fillRule="evenodd">
+                        <g id="V2---All-new" transform="translate(-683.000000, -1591.000000)">
+                          <g id="Group-20" transform="translate(0.000000, 1068.000000)">
+                            <g id="Group-48" transform="translate(662.000000, 229.000000)">
+                              <g id="Group-10" transform="translate(0.000000, 270.000000)">
+                                <g id="Group-38" transform="translate(0.000000, 4.000000)">
+                                  <g id="Group" transform="translate(21.000000, 20.000000)">
+                                    <polygon
+                                      id="Fill-1"
+                                      fill="#D4EEFF"
+                                      points="10 32 20 32 20 10 10 10"></polygon>
+                                    <polygon
+                                      id="Fill-2"
+                                      fill="#1752F0"
+                                      points="20 32 30.0005 32 30.0005 0 20 0"></polygon>
+                                    <polygon
+                                      id="Fill-3"
+                                      fill="#55B4FC"
+                                      points="0 32 10 32 10 19 0 19"></polygon>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2>Manage your portfolio</h2>
+                    <p>
+                      Buy and sell popular digital currencies, keep track of them in the one place.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                className="hompage-inner-third-card-img"
+                src="https://assets.coinbase.com/assets/2a688cc86b2508f2.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </section>
     )
   }

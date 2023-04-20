@@ -10,6 +10,7 @@ export class SignUp extends Component {
   signUp = (ev) => {
     ev.preventDefault()
     const user = UserService.signUp(this.state.username)
+    this.props.history.push('/contact')
   }
 
   handleChange = ({ target }) => {
